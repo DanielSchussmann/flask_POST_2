@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ting</title>
+  <link href="{{ url_for('static',filename='styles/style.css') }}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="head_band"></div>
+
+  <div id="main">
+
+    <div id="back_btn">
+
+        <video width="500" height="350" id="vid" autoplay muted>
+          <source src="{{ url_for('static',filename='resc/video.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+
+
+    <div id='Search'>
+        <form id ="form_wrapper" method="POST" action="/">
+      <input id='search_txt' name='search_txt' value="" placeholder="Search for user" autocomplete="off" type="text">
+      <input type='submit' id='search_bttn' name='search_bttn' value='Search' onclick="search_invis()">
+        </form>
+    </div>
+
+  </div>
+
+  <script src="{{ url_for('static',filename='scripts/script.js') }}"></script>
+</body>
+
+</html>
